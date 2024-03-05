@@ -9,6 +9,7 @@ pb_randomdata est un package npm simple qui fournit des utilitaires pour génér
 - Générer un prénom aléatoires à partir d'une liste prédéfinie.
 - Générer une date aléatoire dans une plage de dates spécifiées 
 - Générer une couleur aléatoire
+- Générer des coordonnées aléatoires
 
 ## Utilisation
 
