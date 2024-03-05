@@ -4,7 +4,7 @@
  * @param {number} max - La valeur maximale (incluse) du nombre aléatoire.
  * @returns {number} Le nombre aléatoire généré.
  */
-export const generatedNumber = (min: number, max: number): number => {
+const generatedNumber = (min: number, max: number): number => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -13,7 +13,7 @@ export const generatedNumber = (min: number, max: number): number => {
  * @param {number} length - La longueur de la chaîne de caractères à générer.
  * @returns {string} La chaîne de caractères aléatoire générée.
  */
-export const generatedString = (length: number): string => {
+const generatedString = (length: number): string => {
     const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     let result = "";
     for (let i = 0; i < length; i++) {
@@ -26,7 +26,7 @@ export const generatedString = (length: number): string => {
  * Génère un prénom aléatoire à partir d'une liste prédéfinie de prénoms.
  * @returns {string} Le prénom aléatoire généré.
  */
-export const generateRandomFirstName = (): string => {
+const generateRandomFirstName = (): string => {
     const firstNames = [
         "John",
         "Jane",
@@ -42,3 +42,9 @@ export const generateRandomFirstName = (): string => {
 
     return firstNames[Math.floor(Math.random() * firstNames.length)];
 }
+
+module.exports = {
+    generatedNumber,
+    generatedString,
+    generateRandomFirstName,
+};
