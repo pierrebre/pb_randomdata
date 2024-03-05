@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-
-exports.generateRandomColor = exports.generateRandomDate = exports.generateRandomFirstName = exports.generatedString = exports.generatedNumber = void 0;
+exports.generateRandomCoordinates = exports.generateRandomColor = exports.generateRandomDate = exports.generateRandomFirstName = exports.generatedString = exports.generatedNumber = void 0;
 /**
  * Génère un nombre aléatoire entier compris entre les valeurs min et max incluses.
  * @param {number} min - La valeur minimale (incluse) du nombre aléatoire.
@@ -73,7 +72,7 @@ const generateRandomColor = () => {
     return color;
 };
 exports.generateRandomColor = generateRandomColor;
-
+/**
  * Génère des coordonnées de latitude et longitude aléatoires.
  * @returns {{ latitude: number, longitude: number }} Les coordonnées générées.
  */

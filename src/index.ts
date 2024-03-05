@@ -72,7 +72,7 @@ const generateRandomColor = (): string => {
 
     return color;
 }
-
+/** 
  * Génère des coordonnées de latitude et longitude aléatoires.
  * @returns {{ latitude: number, longitude: number }} Les coordonnées générées.
  */
