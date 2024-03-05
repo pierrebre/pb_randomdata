@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.generateRandomFirstName = exports.generatedString = exports.generatedNumber = void 0;
 /**
  * Génère un nombre aléatoire entier compris entre les valeurs min et max incluses.
  * @param {number} min - La valeur minimale (incluse) du nombre aléatoire.
@@ -8,6 +10,7 @@
 const generatedNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
+exports.generatedNumber = generatedNumber;
 /**
  * Génère une chaîne de caractères aléatoire de la longueur spécifiée.
  * @param {number} length - La longueur de la chaîne de caractères à générer.
@@ -21,6 +24,7 @@ const generatedString = (length) => {
     }
     return result;
 };
+exports.generatedString = generatedString;
 /**
  * Génère un prénom aléatoire à partir d'une liste prédéfinie de prénoms.
  * @returns {string} Le prénom aléatoire généré.
@@ -40,8 +44,4 @@ const generateRandomFirstName = () => {
     ];
     return firstNames[Math.floor(Math.random() * firstNames.length)];
 };
-export default {
-    generatedNumber,
-    generatedString,
-    generateRandomFirstName,
-};
+exports.generateRandomFirstName = generateRandomFirstName;

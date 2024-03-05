@@ -43,8 +43,5 @@ const generateRandomFirstName = (): string => {
     return firstNames[Math.floor(Math.random() * firstNames.length)];
 }
 
-module.exports = {
-    generatedNumber,
-    generatedString,
-    generateRandomFirstName,
-};
+// Export des fonctions
+export { generatedNumber, generatedString, generateRandomFirstName };
