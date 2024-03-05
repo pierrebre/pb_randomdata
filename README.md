@@ -1,7 +1,7 @@
 ```markdown
-# Bienvenue dans pb_ramdomdata!
+# Bienvenue dans pb_randomdata!
 
-pb_ramdomdata est un package npm simple qui fournit des utilitaires pour générer des données aléatoires, y compris des nombres aléatoires, des chaînes de caractères aléatoires et des prénoms aléatoires.
+pb_randomdata est un package npm simple qui fournit des utilitaires pour générer des données aléatoires, y compris des nombres aléatoires, des chaînes de caractères aléatoires et des prénoms aléatoires.
 
 ## Fonctionnalités
 
@@ -13,18 +13,18 @@ pb_ramdomdata est un package npm simple qui fournit des utilitaires pour génér
 
 ### Installation
 
-Vous pouvez installer pb_ramdomdata depuis npm en utilisant la commande suivante :
+Vous pouvez installer pb_randomdata depuis npm en utilisant la commande suivante :
 
 ```bash
-npm install pb_ramdomdata
+npm install pb_randomdata
 ```
 
 ### Exemple d'utilisation
 
-Voici comment vous pouvez utiliser pb_ramdomdata dans votre application Node.js :
+Voici comment vous pouvez utiliser pb_randomdata dans votre application Node.js :
 
 ```javascript
-const { generateRandomNumber, generateRandomString, generateRandomFirstName } = require('pb_ramdomdata');
+const { generateRandomNumber, generateRandomString, generateRandomFirstName } = require('pb_randomdata');
 
 // Générer un nombre aléatoire entre 1 et 100
 const randomNumber = generateRandomNumber(1, 100);
@@ -60,10 +60,10 @@ Génère un prénom aléatoire à partir d'une liste prédéfinie de prénoms co
 
 ## Contribuer
 
-Les contributions sont les bienvenues ! Si vous avez des idées d'améliorations ou de nouvelles fonctionnalités, n'hésitez pas à ouvrir une issue ou à soumettre une pull request sur [GitHub](https://github.com/pierrebre/pb_ramdomdata).
+Les contributions sont les bienvenues ! Si vous avez des idées d'améliorations ou de nouvelles fonctionnalités, n'hésitez pas à ouvrir une issue ou à soumettre une pull request sur [GitHub](https://github.com/pierrebre/pb_randomdata).
 
 ## Licence
 
-Ce projet est sous licence ISC - voir le fichier [LICENSE](https://github.com/pierrebre/pb_ramdomdata/blob/main/LICENSE) pour plus de détails.
+Ce projet est sous licence ISC - voir le fichier [LICENSE](https://github.com/pierrebre/pb_randomdata/blob/main/LICENSE) pour plus de détails.
 
-Profitez de la génération de données aléatoires avec pb_ramdomdata! 🎲🚀
+Profitez de la génération de données aléatoires avec pb_randomdata! 🎲🚀
