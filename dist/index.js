@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateRandomFirstName = exports.generatedString = exports.generatedNumber = void 0;
+exports.generateRandomColor = exports.generateRandomDate = exports.generateRandomFirstName = exports.generatedString = exports.generatedNumber = void 0;
 /**
  * Génère un nombre aléatoire entier compris entre les valeurs min et max incluses.
  * @param {number} min - La valeur minimale (incluse) du nombre aléatoire.
@@ -45,3 +45,29 @@ const generateRandomFirstName = () => {
     return firstNames[Math.floor(Math.random() * firstNames.length)];
 };
 exports.generateRandomFirstName = generateRandomFirstName;
+/**
+ * Génère une date aléatoire dans un intervalle donné.
+ * @param {Date} startDate - La date de début de l'intervalle (incluse).
+ * @param {Date} endDate - La date de fin de l'intervalle (incluse).
+ * @returns {Date} La date aléatoire générée.
+ */
+const generateRandomDate = (startDate, endDate) => {
+    const startTimestamp = startDate.getTime();
+    const endTimestamp = endDate.getTime();
+    const randomTimestamp = Math.random() * (endTimestamp - startTimestamp) + startTimestamp;
+    return new Date(randomTimestamp);
+};
+exports.generateRandomDate = generateRandomDate;
+/**
+ * Génère une couleur au format hexadécimal.
+ * @returns {string} La couleur générée au format hexadécimal.
+ */
+const generateRandomColor = () => {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+};
+exports.generateRandomColor = generateRandomColor;
