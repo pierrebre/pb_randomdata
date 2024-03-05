@@ -56,7 +56,7 @@ const generateRandomCoordinates = () => {
     const longitude = Math.random() * 360 - 180;
     return { latitude, longitude };
 };
-exports.generateRandomCoordinates = generateRandomCoordinates;
+exports.generateRandomCoordinates = generateRandomCoordinates
 /**
  * Génère une date aléatoire dans un intervalle donné.
  * @param {Date} startDate - La date de début de l'intervalle (incluse).
@@ -83,3 +83,15 @@ const generateRandomColor = () => {
     return color;
 };
 exports.generateRandomColor = generateRandomColor;
+/**
+ * Génère des coordonnées de latitude et longitude aléatoires.
+ * @returns {{ latitude: number, longitude: number }} Les coordonnées générées.
+ */
+const generateRandomCoordinates = () => {
+    // Génération de latitude aléatoire entre -90 et 90
+    const latitude = Math.random() * 180 - 90;
+    // Génération de longitude aléatoire entre -180 et 180
+    const longitude = Math.random() * 360 - 180;
+    return { latitude, longitude };
+};
+exports.generateRandomCoordinates = generateRandomCoordinates;
