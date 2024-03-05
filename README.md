@@ -1,3 +1,8 @@
+# Membre du projet
+- Pierre Barbé
+- Malo Gérard
+- Mathieu Besson
+
 # Bienvenue dans pb_randomdata!
 
 pb_randomdata est un package npm simple qui fournit des utilitaires pour générer des données aléatoires, y compris des nombres aléatoires, des chaînes de caractères aléatoires et des prénoms aléatoires.
