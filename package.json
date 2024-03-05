@@ -1,6 +1,6 @@
 {
   "name": "pb_randomdata",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Package for generate random data",
   "main": "dist/index.js",
   "scripts": {
