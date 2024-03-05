@@ -43,5 +43,19 @@ const generateRandomFirstName = (): string => {
     return firstNames[Math.floor(Math.random() * firstNames.length)];
 }
 
+/**
+ * Génère des coordonnées de latitude et longitude aléatoires.
+ * @returns {{ latitude: number, longitude: number }} Les coordonnées générées.
+ */
+const generateRandomCoordinates = (): { latitude: number, longitude: number } => {
+    // Génération de latitude aléatoire entre -90 et 90
+    const latitude = Math.random() * 180 - 90;
+    
+    // Génération de longitude aléatoire entre -180 et 180
+    const longitude = Math.random() * 360 - 180;
+
+    return { latitude, longitude };
+}
+
 // Export des fonctions
-export { generatedNumber, generatedString, generateRandomFirstName };
+export { generatedNumber, generatedString, generateRandomFirstName, generateRandomCoordinates };
