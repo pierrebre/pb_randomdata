@@ -44,7 +44,20 @@ const generateRandomFirstName = (): string => {
 }
 
 /**
+ * Génère des coordonnées de latitude et longitude aléatoires.
+ * @returns {{ latitude: number, longitude: number }} Les coordonnées générées.
+ */
+const generateRandomCoordinates = (): { latitude: number, longitude: number } => {
+    // Génération de latitude aléatoire entre -90 et 90
+    const latitude = Math.random() * 180 - 90;
+    
+    // Génération de longitude aléatoire entre -180 et 180
+    const longitude = Math.random() * 360 - 180;
 
+    return { latitude, longitude };
+}
+
+/**
  * Génère une date aléatoire dans un intervalle donné.
  * @param {Date} startDate - La date de début de l'intervalle (incluse).
  * @param {Date} endDate - La date de fin de l'intervalle (incluse).
@@ -86,5 +99,5 @@ const generateRandomCoordinates = (): { latitude: number, longitude: number } =>
     return { latitude, longitude };
 }
 
-// Export des fonctions
-export {  generatedNumber, generatedString, generateRandomFirstName, generateRandomDate, generateRandomColor, generateRandomCoordinates };
+
+export { generatedNumber, generatedString, generateRandomFirstName, generateRandomDate, generateRandomColor, generateRandomCoordinates };
