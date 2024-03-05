@@ -1,13 +1,14 @@
-```markdown
 # Bienvenue dans pb_randomdata!
 
 pb_randomdata est un package npm simple qui fournit des utilitaires pour générer des données aléatoires, y compris des nombres aléatoires, des chaînes de caractères aléatoires et des prénoms aléatoires.
 
 ## Fonctionnalités
 
-- Générer des nombres aléatoires dans une plage spécifiée.
-- Générer des chaînes de caractères aléatoires de n'importe quelle longueur.
-- Générer des prénoms aléatoires à partir d'une liste prédéfinie.
+- Générer un nombre aléatoires dans une plage spécifiée.
+- Générer une chaîne de caractères aléatoires de n'importe quelle longueur.
+- Générer un prénom aléatoires à partir d'une liste prédéfinie.
+- Générer une date aléatoire dans une plage de dates spécifiées 
+- Générer une couleur aléatoire
 
 ## Utilisation
 
@@ -24,18 +25,18 @@ npm install pb_randomdata
 Voici comment vous pouvez utiliser pb_randomdata dans votre application Node.js :
 
 ```javascript
-const { generateRandomNumber, generateRandomString, generateRandomFirstName } = require('pb_randomdata');
+import randomData from 'pb_randomdata';
 
 // Générer un nombre aléatoire entre 1 et 100
-const randomNumber = generateRandomNumber(1, 100);
+const randomNumber = randomData.generateRandomNumber(1, 100);
 console.log(randomNumber);
 
 // Générer une chaîne de caractères aléatoire de longueur 10
-const randomString = generateRandomString(10);
+const randomString = randomData.generateRandomString(10);
 console.log(randomString);
 
 // Générer un prénom aléatoire
-const randomFirstName = generateRandomFirstName();
+const randomFirstName = randomData.generateRandomFirstName();
 console.log(randomFirstName);
 ```
 
@@ -57,6 +58,32 @@ Génère une chaîne de caractères aléatoire de la longueur spécifiée.
 ### `generateRandomFirstName(): string`
 
 Génère un prénom aléatoire à partir d'une liste prédéfinie de prénoms courants.
+
+### `generateRandomFloat(min: number, max: number): number`
+
+Génère un nombre aléatoire à virgule flottante entre les valeurs minimum et maximum spécifiées (incluses).
+
+- `min`: La valeur minimale du nombre aléatoire.
+- `max`: La valeur maximale du nombre aléatoire.
+
+### `generateRandomLastName(): string`
+
+Génère un nom de famille aléatoire à partir d'une liste prédéfinie de noms de famille courants.
+
+### `generateRandomDate(startDate: Date, endDate: Date): Date`
+
+Génère une date aléatoire dans un intervalle donné.
+
+- `startDate`: La date de début de l'intervalle (incluse).
+- `endDate`: La date de fin de l'intervalle (incluse).
+
+### `generateRandomColor(): string`
+
+Génère une couleur au format hexadécimal.
+
+### `generateRandomCoordinates(): Object`
+
+Génère des coordonnées aléatoires avec latitude / longitude
 
 ## Contribuer
 
