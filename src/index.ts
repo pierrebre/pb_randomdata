@@ -44,6 +44,35 @@ const generateRandomFirstName = (): string => {
 }
 
 /**
+
+ * Génère une date aléatoire dans un intervalle donné.
+ * @param {Date} startDate - La date de début de l'intervalle (incluse).
+ * @param {Date} endDate - La date de fin de l'intervalle (incluse).
+ * @returns {Date} La date aléatoire générée.
+ */
+const generateRandomDate = (startDate: Date, endDate: Date): Date => {
+    const startTimestamp = startDate.getTime();
+    const endTimestamp = endDate.getTime();
+    const randomTimestamp = Math.random() * (endTimestamp - startTimestamp) + startTimestamp;
+
+    return new Date(randomTimestamp);
+}
+
+/**
+ * Génère une couleur au format hexadécimal.
+ * @returns {string} La couleur générée au format hexadécimal.
+ */
+const generateRandomColor = (): string => {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+
+    return color;
+}
+
  * Génère des coordonnées de latitude et longitude aléatoires.
  * @returns {{ latitude: number, longitude: number }} Les coordonnées générées.
  */
@@ -58,4 +87,4 @@ const generateRandomCoordinates = (): { latitude: number, longitude: number } =>
 }
 
 // Export des fonctions
-export { generatedNumber, generatedString, generateRandomFirstName, generateRandomCoordinates };
+export {  generatedNumber, generatedString, generateRandomFirstName, generateRandomDate, generateRandomColor, generateRandomCoordinates };
